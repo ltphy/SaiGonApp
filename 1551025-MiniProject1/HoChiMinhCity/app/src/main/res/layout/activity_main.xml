@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.phy.hochiminhcity.MainActivity">
+    <TextView
+    android:id="@+id/tv_title"
+    android:text="Top Things in SaiGon"
+    android:textColor="#FF0808"
+        android:background="#2c3641"
+        android:gravity="center"
+    android:layout_height="0dp"
+    android:layout_gravity="center"
+    android:textStyle="bold"
+    android:textSize="30sp"
+    android:fontFamily="sans-serif-condensed"
+    android:layout_width="match_parent"
+    android:paddingTop="10dp"
+    android:layout_weight="1" />
+    <ListView
+        android:id="@+id/recommend_list"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:paddingTop="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#808080"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_recommend"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/likesolid"
+            android:layout_marginRight="40dp" />
+
+        <Button
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:id="@+id/btn_map"
+            android:onClick="mapActivity"
+            android:background="@mipmap/map"
+            />
+
+        <Button
+            android:id="@+id/btn_mylists"
+            android:onClick="mylistActivity"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:background="@mipmap/list" />
+    </LinearLayout>
+</LinearLayout>

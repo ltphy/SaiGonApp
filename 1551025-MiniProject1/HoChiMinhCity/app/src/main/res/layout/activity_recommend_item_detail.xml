@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.phy.hochiminhcity.RecommendItemDetail">
+    <ImageView
+    android:id="@+id/iv_recommend_item_detail"
+    android:layout_width="match_parent"
+    android:layout_weight="5"
+        android:focusable="false"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        android:focusable="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:focusable="false"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:focusable="false"
+
+                    android:id="@+id/tv_name_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp" />
+                <TextView
+                    android:focusable="false"
+                    android:id="@+id/tv_address_icon"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    android:background="@mipmap/map_marker" />
+
+                <TextView
+                    android:focusable="false"
+                    android:id="@+id/tv_phone_icon"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@mipmap/phone_icon" />
+
+                <TextView
+                    android:focusable="false"
+                    android:id="@+id/tv_clock_icon"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    android:background="@mipmap/clock" />
+                </LinearLayout>
+        <LinearLayout
+            android:focusable="false"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="wrap_content">
+        <TextView
+            android:focusable="false"
+            android:id="@+id/detail_name"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textStyle="bold" />
+                <TextView
+                    android:focusable="false"
+                    android:id="@+id/detail_address"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="18sp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:focusable="false"
+                    android:id="@+id/detail_phone"
+                    android:textSize="20sp"
+                    android:onClick="onClickCall"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:focusable="false"
+                    android:id="@+id/detail_hours"
+                    android:layout_width="match_parent"
+                    android:textSize="20sp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:focusable="false"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bookmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="18dp"
+                android:background="@mipmap/save"
+                android:enabled="false"
+                android:onClick="bookMarkMyList"
+                android:paddingTop="0dp" />
+
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="4dp"
+                android:text="save"
+                android:textColor="#990099"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:focusable="false"
+                android:background="@mipmap/showonmap"
+                android:onClick="onShowMapCLick"
+                android:text="SHOW ON MAP"
+                android:textColor="#ff5c5c"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#808080"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btn_recommend"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/likesolid"
+            android:layout_marginRight="40dp" />
+
+        <Button
+
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:id="@+id/btn_map"
+            android:onClick="mapActivity"
+            android:background="@mipmap/map"
+            />
+
+        <Button
+
+            android:id="@+id/btn_mylists"
+            android:onClick="mylistActivity"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:background="@mipmap/list" />
+    </LinearLayout>
+</LinearLayout>

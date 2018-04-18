@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+
+        <SearchView
+            android:id="@+id/search_location"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:id="@+id/ic_find_path"
+            android:background="@mipmap/ic_distance"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/find_path"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="0dp"
+        android:layout_weight="0"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Enter origin address"
+            android:id="@+id/edt_origin" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Enter destination address"
+            android:id="@+id/edt_destination" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_find_path"
+                android:layout_weight="1"
+                android:text="Find Path" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_distance" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/tv_distance"
+                android:text="0 km" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_clock" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_time"
+                android:layout_weight="2"
+                android:text="0 mins" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_weight="8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:context="com.example.phy.hochiminhcity.MapsActivity" >
+        <com.example.phy.hochiminhcity.MapWrapperLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/map_wrapper" >
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/map"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:name="com.google.android.gms.maps.MapFragment" />
+        </com.example.phy.hochiminhcity.MapWrapperLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_recommend"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/recommend"
+            android:onClick="recommendActivity"
+            android:layout_marginRight="40dp"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:id="@+id/btn_map"
+            android:background="@mipmap/mapsolid"
+            />
+
+        <Button
+            android:id="@+id/btn_mylists"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:onClick="mylistActivity"
+            android:layout_marginLeft="40dp"
+            android:background="@mipmap/list" />
+    </LinearLayout>
+
+</LinearLayout>

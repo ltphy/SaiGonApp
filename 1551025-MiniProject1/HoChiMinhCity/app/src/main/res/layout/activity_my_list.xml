@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.example.phy.hochiminhcity.MyList">
+    <ListView
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/lv_mylist"
+        android:layout_weight="9" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+      />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_recommend"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/recommend"
+            android:onClick="recommendActivity"
+            android:layout_marginRight="40dp" />
+
+        <Button
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:id="@+id/btn_map"
+            android:onClick="mapActivity"
+            android:background="@mipmap/map"
+            />
+
+        <Button
+            android:id="@+id/btn_mylists"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:background="@mipmap/listsolid" />
+    </LinearLayout>
+
+</LinearLayout>
